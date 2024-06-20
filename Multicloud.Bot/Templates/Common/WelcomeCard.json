@@ -1,57 +1,51 @@
 {
   "type": "AdaptiveCard",
   "body": [
-    {
-      "type": "ColumnSet",
-      "columns": [
-        {
-          "type": "Column",
-          "width": "stretch",
-          "items": [
-            {
-              "type": "TextBlock",
-              "text": "Multicloud",
-              "wrap": true,
-              "horizontalAlignment": "Left",
-              "size": "Large",
-              "weight": "Bolder"
-            }
+      {
+          "type": "ColumnSet",
+          "columns": [
+              {
+                  "type": "Column",
+                  "width": "stretch",
+                  "items": [
+                      {
+                          "type": "TextBlock",
+                          "text": "${Title}",
+                          "wrap": true,
+                          "horizontalAlignment": "Left",
+                          "weight": "Bolder",
+                          "size": "Large",
+                          "color": "Dark"
+                      },
+                      {
+                          "type": "Image",
+                          "url": "${Logo}",
+                          "horizontalAlignment": "Right"
+                      }
+                  ]
+              }
           ]
-        },
-        {
-          "type": "Column",
-          "width": "stretch",
-          "items": [
-            {
-              "type": "Image",
-              "url": "${LogoUrl}",
-              "horizontalAlignment": "Right"
-            }
+      },
+      {
+          "type": "TextBlock",
+          "text": "Hi ${Username}!\nWelcome, how can I help you today?",
+          "wrap": true,
+          "weight": "Bolder"
+      },
+      {
+          "type": "ActionSet",
+          "actions": [
+              {
+                  "type": "Action.Submit",
+                  "title": "Get Started"
+              },
+              {
+                  "type": "Action.OpenUrl",
+                  "title": "Visit Us"
+              }
           ]
-        }
-      ]
-    },
-    {
-      "type": "TextBlock",
-      "text": "Hi ${Username}! Welcome, I'm the Multicloud bot. I can help you with a variety of things. Try asking me to 'show me my resources' or 'show me my resource groups'.",
-      "wrap": true,
-      "weight": "Bolder"
-    },
-    {
-      "type": "ActionSet",
-      "actions": [
-        {
-          "type": "Action.Submit",
-          "title": "Get Started"
-        },
-        {
-          "type": "Action.OpenUrl",
-          "title": "Visit Us",
-          "url": "https://multi-cloud.in"
-        }
-      ]
-    }
+      }
   ],
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "version": "1.4"
+  "version": "1.5"
 }
